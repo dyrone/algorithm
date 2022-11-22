@@ -1,0 +1,31 @@
+version: 2.1
+parameters:
+  GHA_Actor:
+    type: string
+    default: ""
+  GHA_Action:
+    type: string
+    default: ""
+  GHA_Event:
+    type: string
+    default: ""
+  GHA_Meta:
+    type: string
+    default: ""
+
+on:
+  push:
+
+on:
+  pull_request:
+  types: [opened, reopened, synchronize, assigned, edited]
+
+jobs:
+  trigger-circleci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dyrone-cricleci-action
+        id: <customize id>
+        uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.5
+        env:
+          CCI_TOKEN: ${{ secrets.CCI_TOKEN }}
