@@ -15,10 +15,8 @@ parameters:
 
 on:
   push:
-
-on:
   pull_request:
-  types: [opened, reopened, synchronize, assigned, edited]
+    types: [opened, reopened, synchronize, assigned, edited]
 
 jobs:
   trigger-circleci:
