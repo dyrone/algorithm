@@ -7,8 +7,8 @@ jobs:
   trigger-circleci:
     runs-on: ubuntu-latest
     steps:
-      - name: dyrone-cricleci-action
-        id: dyrone-id-1
-        uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.5
+      - name: CircleCI Trigger on Pull Request
+        id: <customize id>
+        uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0
         env:
           CCI_TOKEN: ${{ secrets.CCI_TOKEN }}
