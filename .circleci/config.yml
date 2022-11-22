@@ -24,3 +24,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+
+- name: Trigger CircleCI Pipeline
+  uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.5
